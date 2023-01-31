@@ -1,7 +1,12 @@
 import React from "react";
 import FormContainer from "./FormContainer";
+import { progressProps } from "../../App";
 
-function Form() {
+interface Props {
+  progress: progressProps;
+}
+
+const Form: React.FC<Props> = ({ progress }) => {
   return (
     <div className="w-100 h-[100vh] flex flex-col items-center">
       <div>
@@ -13,9 +18,9 @@ function Form() {
           free to add as much detail as needed.
         </p>
       </div>
-      <FormContainer />
+      <FormContainer progress={progress} />
     </div>
   );
-}
+};
 
 export default Form;
