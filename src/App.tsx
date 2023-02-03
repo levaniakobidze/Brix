@@ -11,13 +11,13 @@ export interface progressProps {
 
 function App(): JSX.Element {
   const [progress, setProgress] = useState<progressProps>({
-    first: 100,
-    second: 30,
-    third: 80,
-    fourth: 40,
+    first: 0,
+    second: 0,
+    third: 0,
+    fourth: 0,
   });
   return (
-    <div className="w-100 h-screen bg-white">
+    <div className="w-100 h-auto bg-[#f3f7f7]">
       <Header />
       <Form progress={progress} />
     </div>
